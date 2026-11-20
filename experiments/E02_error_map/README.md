@@ -29,4 +29,21 @@ I_r near 0.4 T (handover's recalled 2.947/Omega corresponds to I_r/T = 0.387).
 fit of log E_full vs log R over R in [25, 40] um gives slope -6.0 +- 0.3.
 
 ## Result
-(appended after the run)
+
+(appended 2026-11-20; results.json raw, summary.json p_c-weighted over n' = 52, 53; runtime 5216 s)
+
+(c) T = 0.2641 us (= 2 pi x 1.215 / Omega; the 275 ns of the paper includes rise times not modelled),
+I_r/T = 0.1925 (inputs-averaged; the handover's 2.947/Omega = 0.387 T is the value for an atom in |1>),
+BBR rates 53S -> 52P 2525 /s, -> 53P 2458 /s, p_c = 1.284e-4 + 1.250e-4 = 2.533e-4 per atom per CZ.
+(a) E_full (error increment, all contaminant states weighted), selected (B along x, alpha = 0 / 90 deg):
+R = 4 um 0.63 / 0.69; 8 um 0.87 / 0.78; 10 um 0.87 / 0.49; 12 um 0.62 / 0.22; 14 um 0.36 / 0.10;
+20 um 0.053 / 0.013; 30 um 4.7e-3 / 1.1e-3; 40 um 8.3e-4 / 2.0e-4. B along z (normal): nearly
+isotropic in plane, 0.59 at 10 um, 0.013 at 20 um. Full tables: summary.json.
+Leakage fraction of the error: 0.2-0.5 for R <= 8 um, > 0.9 for R >= 14 um, 1.00 for R >= 20 um:
+the long-range error is excitation hopping into the gate atom (P-state leakage, converted to loss),
+not a Pauli error.
+Angular structure: suppression near alpha = 60 deg when B lies along the row (1 - 3 cos^2 theta node).
+Tail exponent check (pre-registered): slopes of log E_full vs log R on [25, 40] um between -5.97 and
+-6.04 for all B and alpha in {0, 90}: **PASS**.
+(b) E_same / E_full = 0.39 for R >= 17 um (expectation ~0.3); 0.5-1.3 at R <= 12 um (a contaminant
+appearing mid-gate is more harmful than one present throughout at short range).
