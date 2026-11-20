@@ -11,3 +11,5 @@ To the authors of Evered et al., Nature 622, 268 (2023), and Bluvstein et al., N
    at full depth? (This sets how fast an anti-trapped P-state atom leaves its site.)
 5. Are the shot-resolved data behind ED Fig. 9 (2023) available, so that the neighbour covariance can be
    compared numerically rather than read from a figure?
+6. Tweezer waist and trap depth (and wavelength) in the BLU25 gate zone during the ED Fig. 6g
+   benchmark, and the gate-site pitch and number of sites in the "Normal" and "Sparse" series.
