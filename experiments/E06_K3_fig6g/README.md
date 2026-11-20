@@ -41,3 +41,25 @@ with the same rule, to test whether motion is required.
 
 ## Result
 (appended after the run)
+(appended 2026-11-20; predictions.json, verdict.py, verdict_output.txt. 432 model variants per
+motion/static case x f in {0.8, 1.0}.)
+
+**Verdict: K3 does NOT fire.** Prediction band (min..max over the declared range) vs 2-sigma data:
+| test | data (%) | motion model band (%) | median | decay-only band (%) |
+|---|---|---|---|---|
+| Normal D(50) | [0.140, 0.212] | [0.056, 0.218] | 0.122 | [0.042, 0.247] |
+| Normal D(100) | [-0.067, 0.069] | [0.022, 0.085] | 0.046 | [0.016, 0.091] |
+| Normal D(200) | [-0.028, 0.040] | [0.004, 0.018] | 0.010 | [0.004, 0.022] |
+| Sparse D_s(50) | [-0.089, 0.059] | [0.005, 0.046] | 0.018 | [0.000, 0.022] |
+Absolute excess from earlier layers, Normal, motion model: 0.056-0.220 % at 50 us, 0.022-0.086 % at
+100 us, 0.0045-0.020 % at 200 us, 0.0001-0.0015 % at 400 us.
+
+**What failed or is weak.** (i) The test does not discriminate: the decay-only variant also passes, so
+ED Fig. 6g does not show that motion is needed (an inference made before the run, in conversation,
+is not supported). (ii) The band spans a factor ~4 at 50 us, dominated by U_g, B direction and the
+fidelity convention f; it is wide enough that agreement is a weak confirmation. (iii) The median
+prediction at 100 us (0.046 %) is above the measured central value (0.001 %) but within 2 sigma.
+(iv) Same-layer errors cancel in D(t) and are untested here.
+**What it shows.** With no fitted parameter, the model gives the size of the 50 us excess within the
+band containing the measurement (median 0.7 x measured) and its disappearance by 100-200 us, and a
+small or zero effect for 2x spacing, as observed.

@@ -57,7 +57,10 @@ def E_interp(Rg, Ag, Mbd, comp, rel):
     tail = np.where(R > Rg[-1], (Rg[-1] / np.maximum(R, 1e-9)) ** 6, 1.0)
     return np.clip(v, 0, None) * tail
 
+_SURV = {}
 def survival(t):
+    if t in _SURV:
+        return _SURV[t]
     e05 = json.load(open("experiments/E05_rates_vs_T/results.json"))["300.0"]["tau_P_us"]
     # J weights within each n' from E02 contaminant weights (52: J=1/2 0.337, J=3/2 0.663; recomputed below)
     from prg.atomic import contaminant_weights
@@ -67,6 +70,7 @@ def survival(t):
         for J in (0.5, 1.5):
             wJ = sum(v for k, v in w.items() if k.j == J)
             s = s + 0.5 * wJ * np.exp(-t / e05[f"{npr}P{J}"])
+    _SURV[t] = s
     return s
 
 def predict(trajs, times, Rg, Ag, M, pct, pkey, pax, sparse, bd_lab, comp, static=False):
