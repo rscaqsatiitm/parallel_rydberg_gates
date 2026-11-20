@@ -4,3 +4,5 @@ literature/text/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+# Figure crops from publisher PDFs (D002)
+literature/notes/fig/
