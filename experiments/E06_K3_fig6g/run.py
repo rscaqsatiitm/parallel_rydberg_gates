@@ -86,6 +86,7 @@ def predict(trajs, times, Rg, Ag, M, pct, pkey, pax, sparse, bd_lab, comp, stati
         for jj in range(1, 13):
             tj = g * jj
             if tj > 1200: break
+            if tj not in times: break           # truncation (E07 note): S(t > 600 us) < 3e-3
             k = times.index(tj)
             if static:   # decay-only variant: contaminant stays on its tweezer (atom offsets +-d/2 along the pair axis)
                 off = np.array([D_PAIR / 2, 0, 0]) if pax == "x" else np.array([0, D_PAIR / 2, 0])

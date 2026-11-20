@@ -36,3 +36,6 @@ the Stage 2 question (K3), not decided here.
 
 ## Result
 (appended after the run)
+**Not run (2026-11-20).** Superseded before it ran: the owner replaced the D003 K2 rule by D006
+(Addendum 1), evaluated in E07. E04's static row-geometry quantities are a special case of the
+E06/E07 machinery and are not needed for any decision; no result is reported here.
