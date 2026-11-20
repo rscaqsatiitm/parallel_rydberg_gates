@@ -46,3 +46,7 @@ Omega/2pi ~ 10-16 MHz in the BLU25 geometry at 300 K, versus the published 4.6 M
 **What this does not include.** Faster gates at fixed n change other error budgets (laser scattering
 from the intermediate state, finite blockade 450 MHz / Omega, pulse distortion); these are outside the
 model and would need sourced numbers before any "required Omega" is quoted as a design target.
+
+**Control result** (appended after the run): PASS. E_same 6-point vs 12-point at 4.6 MHz, B z, alpha 0:
+R = 10 um 0.28874 vs 0.28868 (rel. diff 2e-4); R = 20 um 5.360e-3 vs 5.348e-3 (rel. diff 2e-3); threshold
+10 %. Output: control_output.txt.

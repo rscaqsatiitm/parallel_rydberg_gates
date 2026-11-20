@@ -1,0 +1,2 @@
+R=10: E_same 6-point 2.8874e-01  12-point 2.8868e-01  rel diff 0.000  PASS
+R=20: E_same 6-point 5.3604e-03  12-point 5.3476e-03  rel diff 0.002  PASS
