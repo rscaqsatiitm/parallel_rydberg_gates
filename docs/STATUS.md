@@ -9,7 +9,7 @@ literature/notes/K1_cycle_search.md). K2 per D006; K3 per E06 pre-registration.
 | E01 model controls | pass, one recorded FAIL (high-blockade pulse fidelity 6e-6 short; immaterial) |
 | E02 error map (2023 config) | whole-gate part done, same-layer part running |
 | E03 pairinteraction check | BLOCKED (database download impossible here); substitute E03b running |
-| E04 K2 under D003 | pre-registered, waits for E02 |
+| E04 K2 under D003 | superseded by D006 (not run) |
 | E05 rates vs T | done |
 | E06 K3 vs BLU25 ED Fig. 6g | pre-registered; stage A (trajectories) running; stage B coded |
 | DV1 delay law, DV2 motion | written; independent check running |
