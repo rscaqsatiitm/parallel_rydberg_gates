@@ -51,3 +51,10 @@ result.
 ## Questions for the independent check (neutral wording)
 1. Given (A1)-(A5) and S(t) = exp(-t/tau), what is sum_{j>=1} S(j t)? 2. Under what condition on t is
 the leading-order form of (3) accurate to 10 % in t_wait? 3. Does the same-layer term depend on t?
+
+## Independent check (2026-11-20; derivations/check_DV1_DV2_independent.md, fresh agent given only the
+assumptions and the neutral questions)
+Agrees with (2) and (3). Adds the exact inversion t_wait = tau_P ln(1 + p_c n_full / (eps* - p_c n_same)),
+of which (3) is the large-t limit; (3) underestimates t_wait, by < 10 % only for t/tau_P >~ 1.8
+(p_c n_full / eps* >~ 5). The exact form is used from now on. Same-layer floor confirmed: unreachable
+if p_c n_same >= eps*.

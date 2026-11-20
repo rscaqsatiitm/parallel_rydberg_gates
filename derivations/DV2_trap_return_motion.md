@@ -37,3 +37,10 @@ dynamic polarisability, and what is its value at 852 nm in atomic units? 2. Give
 potential of height U and waist w, what is the speed at infinity of a particle released at rest near
 the top, and the e-folding time of its displacement near the top? 3. Is the orbit-averaging correction
 for an n = 53 P state in a 1 um waist beam small?
+
+## Independent check (2026-11-20; derivations/check_DV1_DV2_independent.md)
+Confirms alpha_e = -349.66 a.u., U_R/U_g = -0.1644 (repulsive, 164 uK at 1 mK), v_inf = 0.177 um/us,
+rho0 = 0.050 um per axis, time to reach rho = w of 14-16 us. **Correction:** the hill-top e-folding time
+is kappa^-1 = w / (2 sqrt(U0/m)) = 3.99 us, not 4.6 us as written above (arithmetic slip; the escape-time
+estimate ~14 us was unaffected). Orbit averaging for n* = 50.35 (rms radius 0.21 um) lowers the peak
+shift by 3.6-7.2 % (m_l dependent), i.e. v_inf by 2-4 %; neglected in E06 and listed as a model error.
