@@ -1,0 +1,48 @@
+T=  300 K p_c=2.53e-04  floor(s=1) 6.92e-04-1.08e-03  s_min 1.5-2.0  tP(s=1) inf  tP(s_min) 120-370 us  tE(1e-4) static 260-290, motion(50-us grid) 250-300  tE(1e-5) static 490-510 us
+    BLU25_surface_L4   reading E 1e-4     : T_th 1085-1660 us  ratio 0.71-1.42
+    BLU25_surface_L4   reading E 1e-5     : T_th 2005-2540 us  ratio 1.31-2.17
+    BLU25_surface_L4   reading P at s_min : T_th 525-1980 us  ratio 0.34-1.69
+    e40_A_L10          reading E 1e-4     : T_th 2645-3400 us  ratio 0.07-0.14
+    e40_A_L10          reading E 1e-5     : T_th 4945-5600 us  ratio 0.14-0.22
+    e40_A_L10          reading P at s_min : T_th 1245-4200 us  ratio 0.04-0.17
+    e40_B_L10          reading E 1e-4     : T_th 2645-3400 us  ratio 0.17-0.46
+    e40_B_L10          reading E 1e-5     : T_th 4945-5600 us  ratio 0.32-0.76
+    e40_B_L10          reading P at s_min : T_th 1245-4200 us  ratio 0.08-0.57
+    e40_C_L10          reading E 1e-4     : T_th 2645-3400 us  ratio 0.48-0.87
+    e40_C_L10          reading E 1e-5     : T_th 4945-5600 us  ratio 0.89-1.44
+    e40_C_L10          reading P at s_min : T_th 1245-4200 us  ratio 0.22-1.08
+    e40_D_L10          reading E 1e-4     : T_th 2645-3400 us  ratio 0.11-0.16
+    e40_D_L10          reading E 1e-5     : T_th 4945-5600 us  ratio 0.21-0.26
+    e40_D_L10          reading P at s_min : T_th 1245-4200 us  ratio 0.05-0.20
+T=   45 K p_c=3.75e-05  floor(s=1) 1.02e-04-1.60e-04  s_min 1.1-1.2  tP(s=1) inf  tP(s_min) 410-1190 us  tE(1e-4) static 260-300, motion(50-us grid) 200-250  tE(1e-5) static 730-790 us
+    BLU25_surface_L4   reading E 1e-4     : T_th 1085-1700 us  ratio 0.71-1.45
+    BLU25_surface_L4   reading E 1e-5     : T_th 2965-3660 us  ratio 1.94-3.13
+    BLU25_surface_L4   reading P at s_min : T_th 1685-5260 us  ratio 1.10-4.49
+    e40_A_L10          reading E 1e-4     : T_th 2645-3500 us  ratio 0.07-0.14
+    e40_A_L10          reading E 1e-5     : T_th 7345-8400 us  ratio 0.21-0.34
+    e40_A_L10          reading P at s_min : T_th 4145-12400 us  ratio 0.12-0.50
+    e40_B_L10          reading E 1e-4     : T_th 2645-3500 us  ratio 0.17-0.47
+    e40_B_L10          reading E 1e-5     : T_th 7345-8400 us  ratio 0.47-1.14
+    e40_B_L10          reading P at s_min : T_th 4145-12400 us  ratio 0.27-1.68
+    e40_C_L10          reading E 1e-4     : T_th 2645-3500 us  ratio 0.48-0.90
+    e40_C_L10          reading E 1e-5     : T_th 7345-8400 us  ratio 1.32-2.15
+    e40_C_L10          reading P at s_min : T_th 4145-12400 us  ratio 0.75-3.18
+    e40_D_L10          reading E 1e-4     : T_th 2645-3500 us  ratio 0.11-0.16
+    e40_D_L10          reading E 1e-5     : T_th 7345-8400 us  ratio 0.31-0.39
+    e40_D_L10          reading P at s_min : T_th 4145-12400 us  ratio 0.17-0.58
+T=    4 K p_c=2.87e-06  floor(s=1) 7.85e-06-1.23e-05  s_min 1.0-1.0  tP(s=1) finite  tP(s_min) 50-60 us  tE(1e-4) static 50-60, motion(50-us grid) 50-50  tE(1e-5) static 280-330 us
+    BLU25_surface_L4   reading E 1e-4     : T_th 245-740 us  ratio 0.16-0.63
+    BLU25_surface_L4   reading E 1e-5     : T_th 1165-1820 us  ratio 0.76-1.55
+    BLU25_surface_L4   reading P at s_min : T_th 245-740 us  ratio 0.16-0.63
+    e40_A_L10          reading E 1e-4     : T_th 545-1100 us  ratio 0.02-0.04
+    e40_A_L10          reading E 1e-5     : T_th 2845-3800 us  ratio 0.08-0.15
+    e40_A_L10          reading P at s_min : T_th 545-1100 us  ratio 0.02-0.04
+    e40_B_L10          reading E 1e-4     : T_th 545-1100 us  ratio 0.04-0.15
+    e40_B_L10          reading E 1e-5     : T_th 2845-3800 us  ratio 0.18-0.51
+    e40_B_L10          reading P at s_min : T_th 545-1100 us  ratio 0.04-0.15
+    e40_C_L10          reading E 1e-4     : T_th 545-1100 us  ratio 0.10-0.28
+    e40_C_L10          reading E 1e-5     : T_th 2845-3800 us  ratio 0.51-0.97
+    e40_C_L10          reading P at s_min : T_th 545-1100 us  ratio 0.10-0.28
+    e40_D_L10          reading E 1e-4     : T_th 545-1100 us  ratio 0.02-0.05
+    e40_D_L10          reading E 1e-5     : T_th 2845-3800 us  ratio 0.12-0.18
+    e40_D_L10          reading P at s_min : T_th 545-1100 us  ratio 0.02-0.05
