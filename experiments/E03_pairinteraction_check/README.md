@@ -15,5 +15,8 @@ literature), so a common error in quantum defects would not be detected.
 asymptote, 5 kHz). A disagreement only in the overall scale of the coupling (all splittings in the
 same ratio) is reported as a radial-matrix-element difference with its size.
 
+**Amendment (2026-11-20, before route 2 reported):** the basis has 2 x 6 x 2 = 24 states, not 48; the
+agent brief carried the same error. Verdict rule unchanged.
+
 ## Result
 (appended after the run)

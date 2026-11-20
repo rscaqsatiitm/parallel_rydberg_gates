@@ -11,7 +11,7 @@ out = {}
 for th in (0, 90):
     n = np.array([np.sin(np.radians(th)), 0, np.cos(np.radians(th))])
     for R in (6, 10, 20):
-        H = np.zeros((48, 48), complex)
+        H = np.zeros((len(basis), len(basis)), complex)
         for i, (a1, b1) in enumerate(basis):
             H[i, i] = E[a1] + E[b1] - E0
             for k, (a2, b2) in enumerate(basis):
