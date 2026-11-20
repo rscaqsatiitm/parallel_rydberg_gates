@@ -222,3 +222,16 @@ def error_components(K, U_ref):
     Fe = sum(abs(np.trace(Uh.conj().T @ K[e])) ** 2 for e in range(K.shape[0])) / 16
     leak = 1 - sum(np.linalg.norm(K[e]) ** 2 for e in range(K.shape[0])) / 4
     return 1 - Fe, leak, 1 - Fe - leak
+
+
+def contaminant_increment(model: ThreeAtom, rC, c0_list, t_on=0.0, baseline=None):
+    """Contaminant-induced (error, leakage, pauli) for each c0: value with coupling minus value without.
+
+    Returns dict c0 -> np.array([d_err, d_leak, d_pauli]) and the baseline dict for reuse.
+    """
+    if baseline is None:
+        Kb = run_gate(model, None, c0_list)
+        baseline = {c0: (Kb[c0][c0], np.array(error_components(Kb[c0], Kb[c0][c0]))) for c0 in c0_list}
+    K = run_gate(model, rC, c0_list, t_on)
+    out = {c0: np.array(error_components(K[c0], baseline[c0][0])) - baseline[c0][1] for c0 in c0_list}
+    return out, baseline
