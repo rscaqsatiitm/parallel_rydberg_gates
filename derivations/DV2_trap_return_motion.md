@@ -5,7 +5,7 @@
   Gaussian beams of waist w (not sourced; range in D007) and ground-state depth U_g (EVE23: ~1 mK;
   BLU25 not given; D007); (B2) the Rydberg (n'P) atom's light shift is that of a free electron plus the
   Rb+ core: U_R(r) = -(alpha_e + alpha_core)/alpha_g * U_g(r) with U_g(r) < 0 the ground-state trap
-  potential; alpha_e = -e^2/(m_e omega^2) (ponderomotive, n-independent for n*^3 lambda^2... i.e. when the
+  potential; alpha_e = -e^2/(m_e omega^2) (ponderomotive; n-independent when the
   Rydberg orbit (~0.3 um at n = 53) is small compared with the waist; the orbit-averaging correction
   is O((r_orbit/w)^2) ~ 0.1 and is neglected, flagged); (B3) classical motion; atom starts with the
   ground-state thermal distribution of the trap (EVE23 ~10 uK) at the moment the traps return
