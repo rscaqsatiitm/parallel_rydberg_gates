@@ -1,0 +1,54 @@
+# Registered parameters. Every value used in a computation is a key here (docs/RULES.md, rule 1).
+# type: SOURCE (quote verified by tools/verify_params.py against literature/text),
+#       FIGURE (figure read, range, needs human check), COMPUTED (library + call), DERIVED (shown).
+evered23.species: {value: Rb87, type: SOURCE, src: arXiv_2304.05420, loc: Methods,
+  quote: "with which we rearrange 87 Rb atoms into programmable, defect-free arrays"}
+evered23.rydberg_state: {value: "53S1/2 mJ=+1/2", type: SOURCE, src: arXiv_2304.05420, loc: Methods / ED Fig. 1,
+  quote: "The atoms are excited from the |F = 2, mF = 0i state to the 53S1/2 Rydberg state in a two-photon scheme with a 420-nm σ + -polarized and a 1013-nm σ − -polarized light."}
+evered23.rydberg_mJ_other_offset: {value: -24, unit: MHz, type: SOURCE, src: arXiv_2304.05420, loc: Methods,
+  quote: "Our modeling also explicitly includes the coupling to the other (mJ = − 1/2) Rydberg state, which is 24 MHz lower in energy and is driven with a Rabi frequency suppressed by a factor of 3"}
+evered23.Omega_over_2pi: {value: 4.6, unit: MHz, type: SOURCE, src: arXiv_2304.05420, loc: Methods,
+  quote: "Combined, this allows us to operate at the intermediate-state detuning of ∆/2π = 7.8 GHz with a Rabi frequency of Ω/2π = 4.6 MHz."}
+evered23.pulse_phase_form: {value: "phi(t) = A cos(omega t - phi0) + delta0 t", type: SOURCE, src: arXiv_2304.05420, loc: Methods Eq. (1),
+  quote: "φ(t) = A cos(ωt − ϕ0 ) + δ0 t."}
+evered23.pulse_params: {value: {A: 0.70497, A_over_2pi: 0.1122, omega_over_Omega: 1.0431, phi0: -0.7318, delta0_over_Omega: 0.0},
+  type: SOURCE, src: arXiv_2304.05420, loc: Methods, quote: "A = 2π × 0.1122, ω = 1.0431 Ω, ϕ0 = −0.7318, δ0 = 0 × Ω,"}
+evered23.OmegaT_over_2pi: {value: 1.215, type: SOURCE, src: arXiv_2304.05420, loc: Methods,
+  quote: "which constitutes an exact gate with time (ΩT /2π) = 1.215, i.e., slightly longer than a resonant single-atom 2π pulse."}
+evered23.pulse_params_calibrated: {value: {A_over_2pi: 0.0988, omega_over_Omega: 1.3629, phi0: -2.6082, delta0_over_Omega: -0.0187},
+  type: SOURCE, src: arXiv_2304.05420, loc: ED Fig. 5,
+  quote: "For no rise time, the parameter values used here are: A/2π = 0.0988, ω/Ω = 1.3629, ϕ0 = −2.6082, and δ0 /Ω = −0.0187."}
+evered23.B_field: {value: 8.5, unit: G, type: SOURCE, src: arXiv_2304.05420, loc: ED Fig. 1,
+  quote: "A DC magnetic field of 8.5 G is applied throughout this work."}
+evered23.pair_distance: {value: 2.0, unit: um, type: SOURCE, src: arXiv_2304.05420, loc: Methods,
+  quote: "we place atoms at 2 µm separation in order to achieve strong interaction strength VRyd /2π ≈ 450 MHz."}
+evered23.blockade_over_2pi: {value: 450, unit: MHz, type: SOURCE, src: arXiv_2304.05420, loc: Methods,
+  quote: "we place atoms at 2 µm separation in order to achieve strong interaction strength VRyd /2π ≈ 450 MHz."}
+evered23.trap_off_and_gap: {value: {trap_off: "few hundred ns", gap_us: 3}, type: SOURCE, src: arXiv_2304.05420, loc: ED Fig. 1b,
+  quote: "and the ground state atoms are then recaptured for roughly ∼ 3µs between consecutive gate applications."}
+evered23.site_pitch: {value: [9, 11], unit: um, type: FIGURE, src: arXiv_2304.05420, loc: Fig. 1 / ED scale bars,
+  note: "No printed value. Agent figure reading ~10 um; range is a placeholder pending human check."}
+evered26.rydberg_state: {value: "53S1/2 mJ=-1/2", type: SOURCE, src: arXiv_2604.25987, loc: Fig. 1A,
+  quote: "exciting from qubit state |1⟩ to the Rydberg state |r⟩ = 53S1/2 , mJ = −1/2 through the intermediate state manifold |e⟩ = 6P3/2 with intermediate state detuning ∆ = 2π × 7.8 GHz"}
+evered26.Omega_peak_over_2pi: {value: 17, unit: MHz, type: SOURCE, src: arXiv_2604.25987, loc: main text,
+  quote: "We use high Rabi frequencies reaching a peak of Ω ≈ 2π × 17 MHz in this work."}
+evered26.B_field: {value: 13.7, unit: G, type: SOURCE, src: arXiv_2604.25987, loc: Supplement 1.1,
+  quote: "To mitigate the effect of this spurious coupling, we increase our bias magnetic field strength to B = 13.7 G, with a larger 38.5 MHz splitting between the two Rydberg levels than in our previous work."}
+evered26.pair_distance: {value: 1.73, unit: um, type: SOURCE, src: arXiv_2604.25987, loc: Supplement 1.1,
+  quote: "We operate with the pair of atoms within each gate site separated by about 1.73µm, where the blockade energy is around 950 MHz."}
+evered26.blockade_over_2pi: {value: 950, unit: MHz, type: SOURCE, src: arXiv_2604.25987, loc: Supplement 1.1,
+  quote: "We operate with the pair of atoms within each gate site separated by about 1.73µm, where the blockade energy is around 950 MHz."}
+evered26.loss_per_atom_per_CZ: {value: 0.054, err: 0.002, unit: "%", type: SOURCE, src: arXiv_2604.25987, loc: main text,
+  quote: "We measure a loss probability of 0.054(2)% per atom per CZ gate"}
+evered26.gate_duration: {value: [120, 140], unit: ns, type: FIGURE, src: arXiv_2604.25987, loc: Fig. 1A, note: "axis ticks 0, 65, 130 ns; human check"}
+evered26.site_pitch_dense: {value: [10, 14], unit: um, type: FIGURE, src: arXiv_2604.25987, loc: Fig. S8A, note: "derived from a ~190 um scale arrow; human check"}
+bluvstein26.Pdecay_budget_fraction: {value: 0.07, unit: "% of error budget", type: SOURCE, src: arXiv_2506.20661, loc: Methods,
+  quote: "Concretely, during Rydberg gates, roughly 0.07% of the error budget is decay of Rydberg atoms to adjacent Rydberg P states."}
+bluvstein26.RB_vs_gap: {value: {F_short: 99.3, F_100us: 99.5}, unit: "%", type: SOURCE, src: arXiv_2506.20661, loc: Methods / ED Fig. 6g,
+  quote: "find that the gate fidelity in this array increases from 99.3% to 99.5% by increasing duration between gates to 100 µs, as the Rydberg atoms decay or eject during that time."}
+bluvstein26.gate_gap_benchmark: {value: 4, unit: us, type: SOURCE, src: arXiv_2506.20661, loc: Methods,
+  quote: "During repeated benchmarking sequences, like the ones reported in Ref. [36], we have only 4 µs between gates, and consequently Rydberg P atoms can survive for many layers of gates and corrupt gates in distant sites."}
+bluvstein26.gate_gap_qec: {value: 400, unit: us, type: SOURCE, src: arXiv_2506.20661, loc: Methods,
+  quote: "In quantum circuits based on atom motion, the duration between gates is sufficiently long (e.g., 400 µs for surface code repeated stabilizer measurements) for these Rydberg P states to decay or eject [82], which natively fixes this issue, and consequently we do not observe such effects during quantum circuits."}
+bluvstein26.gate_zone: {value: {rows: 8, cols: 16, width_um: 175}, type: SOURCE, src: arXiv_2506.20661, loc: main text,
+  quote: "Within this zone, entangling gates are performed simultaneously on up to 256 qubits across 8 rows and 16 columns of gate sites with a horizontal extent of 175 µm."}
