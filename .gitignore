@@ -1,0 +1,6 @@
+# Publisher PDFs and their full-text extractions are not redistributed (see decisions/D002).
+literature/pdf/
+literature/text/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
