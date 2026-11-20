@@ -19,4 +19,12 @@ same ratio) is reported as a radial-matrix-element difference with its size.
 agent brief carried the same error. Verdict rule unchanged.
 
 ## Result
-(appended after the run)
+(appended 2026-11-20)
+**BLOCKED.** Route 2 could not be run: pairinteraction 2.7.0 needs its Rb database tables, which it
+downloads from GitHub. In this container the download failed (session GITHUB_TOKEN rejected with 401
+by api.github.com; anonymous rate limit exhausted at three reset times; attaching the data repository
+pairinteraction/database-sqdt was refused by the session's permission system). The route-2 script
+`pi_reference.py` is syntax-checked but never run. No route-2 numbers exist. Route 1 output: `ours.json`.
+Unblock: provide the Rb tables in /root/.cache/pairinteraction/database/tables, or GitHub access to
+that repository, then run `python pi_reference.py` here and compare under the rule above.
+Substitute independent route: E03b (Coulomb-approximation radial integrals without ARC).
