@@ -1,0 +1,18 @@
+Rb87 53 0.000155048862422765 7.250999380968894e-05 7341.6226625629115 4983.283374316261 0.6787713838423602 {(52, 0.5): 2.2178262735124226, (52, 1.5): 2.300228932297698, (53, 0.5): 2.7039804781264984, (53, 1.5): 2.620251310180035}
+  Omega 4.6 MHz: gate 263 ns, p_c 5.08e-04, R_c 13.1 um, pitch 8.6x12.1: neighbours 6.29, correlated error 3.20e-03
+  Omega 4.6 MHz: gate 263 ns, p_c 5.08e-04, R_c 13.1 um, pitch 5.0x5.0: neighbours 29.30, correlated error 1.49e-02
+  Omega 4.6 MHz: gate 263 ns, p_c 5.08e-04, R_c 13.1 um, pitch 20.0x20.0: neighbours 0.36, correlated error 1.81e-04
+  Omega 17.0 MHz: gate 71 ns, p_c 1.37e-04, R_c 8.5 um, pitch 8.6x12.1: neighbours 1.75, correlated error 2.41e-04
+  Omega 17.0 MHz: gate 71 ns, p_c 1.37e-04, R_c 8.5 um, pitch 5.0x5.0: neighbours 11.46, correlated error 1.58e-03
+  Omega 17.0 MHz: gate 71 ns, p_c 1.37e-04, R_c 8.5 um, pitch 20.0x20.0: neighbours 0.03, correlated error 3.66e-06
+Cs133 60 0.0002100973229926865 9.39398845655943e-05 5885.406779510546 3951.5101687947335 0.6714081654562128 {(59, 0.5): 3.3480284661210358, (59, 1.5): 3.6684690816395844, (60, 0.5): 4.453522842732935, (60, 1.5): 4.127760340610152}
+  Omega 2.0 MHz: gate 606 ns, p_c 9.27e-04, R_c 20.4 um, pitch 8.6x12.1: neighbours 16.38, correlated error 1.52e-02
+  Omega 2.0 MHz: gate 606 ns, p_c 9.27e-04, R_c 20.4 um, pitch 5.0x5.0: neighbours 72.20, correlated error 6.69e-02
+  Omega 2.0 MHz: gate 606 ns, p_c 9.27e-04, R_c 20.4 um, pitch 20.0x20.0: neighbours 3.75, correlated error 3.48e-03
+  Omega 5.0 MHz: gate 242 ns, p_c 3.71e-04, R_c 15.0 um, pitch 8.6x12.1: neighbours 8.89, correlated error 3.29e-03
+  Omega 5.0 MHz: gate 242 ns, p_c 3.71e-04, R_c 15.0 um, pitch 5.0x5.0: neighbours 38.59, correlated error 1.43e-02
+  Omega 5.0 MHz: gate 242 ns, p_c 3.71e-04, R_c 15.0 um, pitch 20.0x20.0: neighbours 0.79, correlated error 2.94e-04
+
+real	0m18.105s
+user	0m6.730s
+sys	0m0.308s
