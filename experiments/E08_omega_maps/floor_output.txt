@@ -1,0 +1,7 @@
+Omega/2pi   2.3 MHz  p_c 5.066e-04  floor per CZ (300 K) 2.77e-03 .. 4.07e-03
+Omega/2pi   4.6 MHz  p_c 2.533e-04  floor per CZ (300 K) 6.92e-04 .. 1.08e-03
+Omega/2pi   9.2 MHz  p_c 1.267e-04  floor per CZ (300 K) 1.35e-04 .. 3.07e-04
+Omega/2pi  18.4 MHz  p_c 6.345e-05  floor per CZ (300 K) 2.25e-05 .. 7.63e-05
+  local exponent 2.3->4.6 MHz: -2.00 (min) -1.91 (max)
+  local exponent 4.6->9.2 MHz: -2.35 (min) -1.82 (max)
+  local exponent 9.2->18.4 MHz: -2.59 (min) -2.01 (max)
