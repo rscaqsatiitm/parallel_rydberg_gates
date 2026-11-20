@@ -6,3 +6,4 @@ __pycache__/
 .ipynb_checkpoints/
 # Figure crops from publisher PDFs (D002)
 literature/notes/fig/
+experiments/E03b_coulomb_check/*.png
