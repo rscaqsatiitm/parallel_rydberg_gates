@@ -10,8 +10,10 @@ def dem_of(c):
 
 def _work(args):
     d, p, mult, mode, shots, seed, kw = args
+    kw = dict(kw); dec_mode = kw.pop("decode_with", mode)
     c, _ = build(d, p, mult, mode, **kw)
-    m = pymatching.Matching.from_detector_error_model(dem_of(c))
+    cd = c if dec_mode == mode else build(d, p, mult, dec_mode, **kw)[0]
+    m = pymatching.Matching.from_detector_error_model(dem_of(cd))
     s = c.compile_detector_sampler(seed=seed)
     det, obs = s.sample(shots, separate_observables=True)
     pred = m.decode_batch(det)

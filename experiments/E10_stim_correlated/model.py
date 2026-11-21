@@ -28,7 +28,7 @@ def E_same(rel, RS, Z):
 
 PAULI = "IXYZ"
 
-def layer_noise(pairs, coords, mult, mode, cluster_min=0.05, rng=None, bdir="z", pitch=PITCH, scale_check=1.0):
+def layer_noise(pairs, coords, mult, mode, cluster_min=0.05, rng=None, bdir="z", pitch=PITCH, scale_check=1.0, coupling="xor"):
     """Noise instructions (stim.Circuit) for one CX layer.
     pairs: list of (q1, q2); coords: dict q -> (x, y). mode: 'corr' or 'indep'. Returns (circuit, marginal f per pair)."""
     RS, Z = emap(bdir); p = mult * P_C
@@ -63,10 +63,11 @@ def layer_noise(pairs, coords, mult, mode, cluster_min=0.05, rng=None, bdir="z",
             q = p * np.prod([e if b else 1 - e for (j, e), b in zip(cl, bits)])
             sub = [cl[i][0] for i in range(k) if bits[i]]
             offs = rng.integers(0, 16, size=len(sub))
-            for i in range(16):                                      # per pair: exactly uniform over 16 Paulis
+            rnd = rng.integers(0, 16, size=(16, len(sub)))           # variant V1: independent random strings
+            for i in range(16):                                      # xor: per pair exactly uniform over 16 Paulis
                 tg = []
-                for j, c in zip(sub, offs):
-                    idx = i ^ int(c)
+                for jj, (j, c) in enumerate(zip(sub, offs)):
+                    idx = (i ^ int(c)) if coupling == "xor" else int(rnd[i, jj])
                     for qb, pi in ((pairs[j][0], idx & 3), (pairs[j][1], idx >> 2)):
                         if pi: tg.append(getattr(stim, "target_" + PAULI[pi].lower())(qb))
                 if tg: chain.append((q / 16, tg))
@@ -78,7 +79,7 @@ def layer_noise(pairs, coords, mult, mode, cluster_min=0.05, rng=None, bdir="z",
         if tf > 0: out.append("DEPOLARIZE2", [pairs[j][0], pairs[j][1]], tf * 15 / 16)
     return out, f
 
-def build(d, p, mult, mode, rounds=None, seed=0, bdir="z", pitch=PITCH, scale_check=1.0, cluster_min=0.05):
+def build(d, p, mult, mode, rounds=None, seed=0, bdir="z", pitch=PITCH, scale_check=1.0, cluster_min=0.05, coupling="xor"):
     """Rotated memory-Z circuit with baseline p (after Clifford, reset, measure) plus contaminant noise after each CX layer."""
     base = stim.Circuit.generated("surface_code:rotated_memory_z", distance=d, rounds=rounds or d,
                                   after_clifford_depolarization=p, after_reset_flip_probability=p,
@@ -92,6 +93,6 @@ def build(d, p, mult, mode, rounds=None, seed=0, bdir="z", pitch=PITCH, scale_ch
         if ins.name == "DEPOLARIZE2" or (ins.name == "CX" and p == 0):
             t = [x.value for x in ins.targets_copy()]; pairs = tuple(zip(t[::2], t[1::2]))
             if pairs not in cache:
-                cache[pairs] = layer_noise(list(pairs), coords, mult, mode, cluster_min, rng, bdir, pitch, scale_check)
+                cache[pairs] = layer_noise(list(pairs), coords, mult, mode, cluster_min, rng, bdir, pitch, scale_check, coupling)
             c, f = cache[pairs]; out += c; margs.append(f)
     return out, margs

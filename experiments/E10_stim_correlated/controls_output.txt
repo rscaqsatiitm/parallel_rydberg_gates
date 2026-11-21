@@ -1,0 +1,4 @@
+C1 {'equal': {'corr': True, 'indep': True}, 'PASS': True}
+C2 {'corr': {'max_abs_z_marg': 2.349448320750553, 'mean_f': 0.05216438671690169, 'n_nb': 29, 'min_z_joint': -2.139561487788558, 'max_z_joint': 360.62689832287975, 'mean_z_joint': 90.35604588135313}, 'indep': {'max_abs_z_marg': 2.3805268763119063, 'mean_f': 0.05216438671690169, 'n_nb': 29, 'min_z_joint': -1.8640727515461848, 'max_z_joint': 2.4669032887838767, 'mean_z_joint': 0.016317623318084836}, 'PASS': True}
+C3 {'corr_pc_doubled': {'max_abs_z_marg': 251.39448890753985, 'mean_f': 0.05216438671690169, 'n_nb': 29, 'min_z_joint': -4.100211185322053, 'max_z_joint': 341.2458412528471, 'mean_z_joint': 81.49666180121118}, 'caught': True}
+C4 {'fails': {'base': 461, 'corr': 472, 'indep': 472}, 'PASS': True}
