@@ -31,3 +31,33 @@ Blockade: E_B ~ 1 (full blockade) for C3 / R^3 >> Omega; crossover near R_ex(Ome
 **Verdict rule.** None (prediction); controls PASS/FAIL as stated.
 
 ## Result
+(appended 2026-11-21; controls.py -> controls_output.txt, run.py -> output.txt + results.json, contrast.py ->
+contrast_output.txt)
+
+**Controls.** (1) Planted analytic (stretched pair, theta = 0, R = 10 um, C3 = 3668.5 MHz um^3): max deviation
+1.5e-12, PASS. (2) Null at 1000 um: 1.1e-7, PASS. (3) Doubled dipole-dipole prefactor: deviation 0.88, caught, PASS.
+
+**Results (SIM, n = 60, B = 5 G).** Full tables in output.txt and results.json (4 states x 11 R x 4 theta; Ramsey at
+8 times, blockade at 4 Rabi frequencies, pi and 2pi).
+(i) *Blockade (pi pulse)* is a monotonic, near-step kernel: E_B > 0.9 for R below a crossover that, at
+Omega/2pi = 1 MHz, lies at 12-15 um for theta = 0 and 8-12 um for theta = 90 deg (state dependent), and E_B < 0.05
+beyond 20 um. The crossover moves out as Omega^-1/3 (E_B at 15 um, 59P3/2: 0.975 / 0.466 / 0.002 at 0.5 / 1 / 5 MHz,
+theta = 0). This matches the expectation (R_ex(1 MHz) = 15 um, E11).
+(ii) *Ramsey* is oscillatory, not monotonic: the probe's Rydberg component is coherently exchanged with the
+contaminant and returns, so E_R(t) oscillates at the exchange frequency C3_eff / R^3 (exactly |cos| for the stretched
+pair at theta = 0, control 1) and at other angles beats between several Delta-m channels split by the Zeeman energy.
+At fixed t, E_R is therefore not a monotonic function of R (e.g. 60P3/2 3/2, theta = 0, t = 1 us: 0.010 at 5 um, 0.305
+at 10 um). Maximised over the t grid, E_R reaches 0.68-0.98 at R = 5, 10 and 20 um for every state and angle.
+The expectation that Ramsey would be smooth away from theta = 0 was wrong.
+(iii) *Field dependence.* At theta = 0 the kernel is field independent (M conserved, degenerate pair states); at
+theta = 90 deg it changes with B (59P3/2 3/2, t = 1 us, R = 5 um: 0.86 at 5 G, 0.64 at 20 G).
+
+**Contrast needed (pre-registered definition C_min = 2.12 / (E sqrt N)).** Blockade at Omega/2pi = 1 MHz:
+C_min = 0.07-0.08 (N = 1e3) at R = 5 um and 10 um for all states (E_B 0.8-1.0 except the P1/2 states at
+theta = 90 deg, 0.34-0.37, C_min 0.18-0.19); at R = 20 um not resolvable with N = 1e4 (E_B 0.001-0.04) unless
+Omega/2pi <= 0.5 MHz (E_B 0.30-0.41 at theta = 0 for P3/2, C_min 0.16-0.23 at N = 1e3). Ramsey, with t chosen from
+the grid (choice of t made after seeing the results; reported as the best attainable, not as a pre-registered
+setting): E_R >= 0.68 at all three R, C_min <= 0.10 at N = 1e3. At a single fixed t = 1 us, 10 of 24 (state, R, theta)
+cases need C > 0.2 or are unresolvable because they fall near a revival. **Hence a contrast of 0.90-0.95 is ample at
+R = 5 and 10 um for either sequence; at R = 20 um only a Ramsey sequence with a scanned free-evolution time, or a
+blockade pulse at Omega/2pi <~ 0.5 MHz, resolves the contaminant.**
