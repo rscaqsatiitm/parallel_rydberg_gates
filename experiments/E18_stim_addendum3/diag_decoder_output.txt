@@ -1,0 +1,3 @@
+d=3 shots=1000000 fails own/indepDEM/own+corrmatch = [2379, 1112, 2609]
+d=5 shots=1500000 fails own/indepDEM/own+corrmatch = [1740, 493, 1254]
+d=7 shots=3000000 fails own/indepDEM/own+corrmatch = [543, 233, 281]
