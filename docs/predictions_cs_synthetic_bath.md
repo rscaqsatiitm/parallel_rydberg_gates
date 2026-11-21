@@ -69,3 +69,45 @@ every specific Cs transition and power here is UNSOURCED as a quench. Light shif
 ~1e4 K; (iii) bath-off contaminant survival with 1/e time outside ~120-180 us (ARC 143-153 us plus room-BBR spreading);
 (iv) a polarised-field creation rate out of nS1/2 that differs from the isotropic rate at equal energy density by more
 than the measurement error.
+
+---
+
+# v2 (2026-11-21, Addendum 3 item 7). Sections above (v1) are unchanged.
+
+## Aim of the experiment (retitled)
+The aim is changed from the repetition-rate (delay) limit to **the same-layer floor**: the error that a contaminant created
+during a Rydberg layer causes in the other atoms of the same layer, which no delay removes. This is the quantity the
+companion paper identifies as setting the density limit (Rb: 0.46-1.1e-3 per CZ at current gate-zone density and 300 K,
+depending on the reading of the pitch) and whose logical cost is larger than its marginal rate (E10). The delay-law
+predictions of v1 item 4 remain valid as a secondary measurement.
+
+## Independent check of v1 item 1 (E19)
+With independent Cs quantum defects (Allinson et al. 2025, arXiv:2502.20961), the v1 lines agree to <= 0.53 MHz and the C3
+values to <= 8.4e-5 relative. v1 item 1 stands.
+
+## Same-layer floor for 3 atoms under the synthetic bath (E17, SIM; protocol ASSUMED as in E17 README)
+Three Cs atoms on a line perpendicular to B (5 G), driven simultaneously by a resonant 2pi pulse g -> 60S1/2 +1/2 -> g;
+floor = mean probability per atom of not returning to g caused by a contaminant created on another atom during the pulse.
+Contaminant creation from the E13 narrow-band (13.6-24.8 GHz) rate model.
+- Kernel: 0.75 at short range, 0.5 at R ~ 20, 16, 13, 10 um for Omega/2pi = 0.5, 1, 2, 5 MHz.
+- **Validity window (from van der Waals crosstalk between the driven atoms, C6(60S) = -101.6 GHz um^6):** a > 10 um at
+  0.5-1 MHz, > 8 um at 2 MHz, > 6 um at 5 MHz. At smaller spacings the atoms blockade each other and the measurement
+  is a blockade experiment, not a floor measurement.
+- Floor per atom at 300 K: 1.8e-3 (a = 12 um), 5.7e-4 (20 um), 6.1e-5 (30 um) at 1 MHz; 1.1e-4 (12 um), 6.5e-6 (20 um) at 5 MHz.
+- Under the bath, shots for a 10 % measurement of the bath-induced floor at contrast 0.90 (x3 if probes fully correlated;
+  about half at C = 0.95):
+
+| T_eff | Omega/2pi | a = 12 um | a = 15 um | a = 20 um |
+|---|---|---|---|---|
+| 1e3 K | 1 MHz | 6.0e-3, 4e5 shots | 4.8e-3, 7e5 | 1.9e-3, 4e6 |
+| 3e3 K | 1 MHz | 1.8e-2, 3e4 | 1.4e-2, 5e4 | 5.6e-3, 3e5 |
+| 3e3 K | 2 MHz | 7.2e-3, 2e5 | 3.7e-3, 7e5 | 8.4e-4, 1e7 |
+| 1e4 K | 2 MHz | 2.4e-2, 2e4 | 1.2e-2, 6e4 | 2.8e-3, 1e6 |
+| 1e4 K | 5 MHz | 3.8e-3, 6e5 | 1.2e-3, 6e6 | 2.1e-4, 2e8 |
+
+  Full grid a = 3-30 um, Omega/2pi = 0.5-5 MHz: experiments/E17_cs_floor/output.txt.
+- **Recommended operating points (opinion):** T_eff ~ 3e3 K at 1 MHz, a = 12-15 um; or T_eff ~ 1e4 K at 2 MHz,
+  a = 10-12 um: floor 1-3e-2 per atom, 1-5e4 shots, inside every validity condition.
+- **What would falsify these predictions:** (i) a bath-induced failure probability that does not scale linearly with injected
+  noise power below 3e3 K; (ii) at fixed T_eff, a ratio floor(12 um) / floor(20 um) at 1 MHz outside 2-5 (predicted 3.2);
+  (iii) at fixed a = 12 um and T_eff, a ratio floor(1 MHz) / floor(5 MHz) outside 8-30 (predicted 15).
