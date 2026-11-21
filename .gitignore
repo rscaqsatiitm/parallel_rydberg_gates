@@ -8,3 +8,9 @@ __pycache__/
 literature/notes/fig/
 experiments/E03b_coulomb_check/*.png
 *.npz
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*Notes.bib
