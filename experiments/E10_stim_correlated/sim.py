@@ -14,10 +14,11 @@ def _work(args):
     c, _ = build(d, p, mult, mode, **kw)
     cd = c if dec_mode == mode else build(d, p, mult, dec_mode, **kw)[0]
     m = pymatching.Matching.from_detector_error_model(dem_of(cd))
-    s = c.compile_detector_sampler(seed=seed)
-    det, obs = s.sample(shots, separate_observables=True)
-    pred = m.decode_batch(det)
-    return int(np.any(pred != obs, axis=1).sum())
+    s = c.compile_detector_sampler(seed=seed); k = 0
+    for b in range(0, shots, 100_000):                      # bounded memory per worker
+        det, obs = s.sample(min(100_000, shots - b), separate_observables=True)
+        k += int(np.any(m.decode_batch(det) != obs, axis=1).sum())
+    return k
 
 def run(d, p, mult, mode, shots, nproc=4, chunk=None, seed0=1, **kw):
     chunk = chunk or max(1, shots // nproc)
