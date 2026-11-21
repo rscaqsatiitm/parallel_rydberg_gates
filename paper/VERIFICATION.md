@@ -66,3 +66,13 @@ All SIM entries: review before submission.
 - pairinteraction cross-check not run (container); the substitute shares quantum-defect data with ARC.
 - Fig. 6g comparison: band ~4x wide; the post-hoc normal-sparse check is labelled as post hoc.
 - Gate-speed scaling excludes scattering, finite blockade and pulse-distortion errors.
+
+## Update 2026-11-21: logical consequence (Sec. V D, Table IV, abstract, discussion, conclusion)
+| Value | Location | Type | Pointer |
+|---|---|---|---|
+| Logical error per round, base / corr / indep, d = 3, 5, 7, p = 1e-3, m = 1; X = 7.8, 9.8, 6.3 with intervals | Sec. V D, Table IV | SIM | experiments/E10_stim_correlated/README.md, analysis_output.txt |
+| X = 3.7-5.6 at p = 2e-3; 2.0-7.7 at m = 3, 10 | Sec. V D | SIM | analysis_output.txt |
+| "four to ten times" (abstract, conclusion) | abstract, Sec. VII | SIM summary | X range 3.7-9.8 at m = 1 over both p |
+| sensitivity ~1 %; decoding with indep model gives same rates | Sec. V D | SIM | E10 README (sensitivity, D1) |
+Assumptions to state to referees: code-qubit placement in the zone (D010 item 3, unsourced), baseline p unsourced,
+failure = undetected loss (no erasure), matching decoder. Review before submission.
