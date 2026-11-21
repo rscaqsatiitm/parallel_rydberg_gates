@@ -26,3 +26,7 @@ Key numbers (provenance in experiment READMEs): p_c = 2.53e-4 per atom per CZ (R
 same-layer floor 0.7-1.1e-3 per CZ at 300 K and 4.6 MHz, 1.4-3.1e-4 at 9.2 MHz, 2.3-7.6e-5 at 18.4 MHz.
 Open human checks: figure-read values (Fig. 6g, pitches), journal vs arXiv versions, RB convention;
 questions for authors in docs/questions_for_authors.md (owner sends, not us).
+
+Note (2026-11-21): the predictions were frozen in commit c4d0393 on branch ccr-825341ea-tdqiim (pushed). The annotated
+tag cs-predictions-v1 exists only in the session's local clone: pushing tags was refused by the session's git access
+(HTTP 403); the owner should create and push it on c4d0393 (`git tag -a cs-predictions-v1 c4d0393 -m "..."`).
