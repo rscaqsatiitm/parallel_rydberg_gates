@@ -1,8 +1,7 @@
 # Status (updated 2026-11-20, end of autonomous run)
 
 Scope: Addendum 1 (thermal speed limit of the QEC cycle). **Gate 2 not passed**; report and
-recommendation in docs/gate2_report.md. No letter draft started. Circuit-level (Stim) stage held for
-the owner's decision.
+recommendation in docs/gate2_report.md. No letter draft started. Circuit-level stage done (E10).
 
 | Item | State |
 |---|---|
@@ -18,6 +17,9 @@ the owner's decision.
 | E08 maps vs Omega | both verdicts PASS; floor ~ Omega^-2 to -2.6 |
 | E09 cycle floor (Gate 2) | NOT passed at 300 K (thermal/kinematic 0.3-2.2, below 2 over declared range) |
 | DV1, DV2 | written; independently checked (DV2 arithmetic slip corrected) |
+| E10 Stim (S4) | correlated floor costs 4-10x the equal-marginal independent model (d = 3-7); no distance penalty |
+| Addendum 2 (Cs) | E11-E15 done; DV3 checked; predictions frozen in docs/predictions_cs_synthetic_bath.md, tag cs-predictions-v1 |
+| Paper (PRA draft) | paper/main.tex, 8 pages, includes E10 |
 
 Key numbers (provenance in experiment READMEs): p_c = 2.53e-4 per atom per CZ (Rb 53S, 4.6 MHz,
 300 K), p_c ~ Omega^-1; tau_P(300 K) = 96-102 us; half-error radius 10-12 um at 4.6 MHz; BLU25-zone
