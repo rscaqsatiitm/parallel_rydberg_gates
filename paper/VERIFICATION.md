@@ -76,3 +76,28 @@ All SIM entries: review before submission.
 | sensitivity ~1 %; decoding with indep model gives same rates | Sec. V D | SIM | E10 README (sensitivity, D1) |
 Assumptions to state to referees: code-qubit placement in the zone (D010 item 3, unsourced), baseline p unsourced,
 failure = undetected loss (no erasure), matching decoder. Review before submission.
+
+## Update 2026-11-21 (Addendum 3): supersedes the E10 rows above where they conflict
+The E10 rows above (X = 6.3-9.8, "four to ten times", "decoding with indep model gives same rates") are withdrawn
+from the text. E10's D1 and V1 sensitivity checks were run at m = 10 and do not hold at m = 1; E18 Amendment 1 shows
+the own-DEM decoder depends on the Pauli table of a correlated event (d = 3: 336-1544 failures per 2e5 shots over 5
+tables) and is the worst of three decoders. The decoder finding rests on one builder (E18/e18.py, E10 model); it has
+not been reproduced with an independently written circuit builder. Review before submission.
+
+| Value | Location | Type | Pointer |
+|---|---|---|---|
+| Extra channels < 3e-4 relative; C3 ratio 0.017, <= 0.003 | Sec. II A | SIM | experiments/E16_floor_addendum3/output.txt |
+| Floor 4.6-8.5e-4 at row pitch 10.0 um; 21-34 % lower | abstract, Sec. V A, VI | SIM | E16 output.txt line "pitch 10.0" |
+| Earlier layers at 400 us +2.0-3.2e-5 (+3-4 %) | Sec. V A | SIM | E16 output.txt |
+| 336-1544 vs 195-231 failures / 2e5 (5 tables, d = 3) | Sec. V D | SIM (exploratory, disclosed) | E18 README Amendment 1 |
+| own / marg failure ratio 2.1-3.5 (d = 3-7) | Sec. V D | SIM | E18 diag_decoder_output.txt |
+| X best 2.5, 2.2, 3.3 (d = 3, 5, 7, p = 1e-3); 1.5-2.5 (p = 2e-3); X own 4-21 | abstract, Sec. V D, Table IV | SIM | E18 analysis_output.txt, item 1b |
+| "1.5-3.3 times" | abstract, Sec. VII | SIM summary | X_best point estimates over p = 1e-3, 2e-3, d = 3-11 |
+| d = 9, 11 rows; X 2.7, 3.3 | Table IV, Sec. V D | SIM | E18 item 2 (three points below 100 failures, stated in caption) |
+| d = 7 corr 1.35e-5 vs 9.3e-7 and 4.7e-6 | Sec. V D | SIM | E18 item 1b; base, indep from E10 |
+| Pitch 10.0: excess 2.2x lower at d = 7; X 1.9-2.5 (2.00, 1.85, 2.46) | Sec. V D, Table IV | SIM | E18 item 4 |
+| Item 3: X 2.3 at d = 5, 7 (f_prev 3.2e-5, factor 1.0003) | Sec. V D | SIM | E18 item 3 |
+| Erasure: 1.2e-5, 2.3e-6, 1.3e-6; 85-97 % removed; X(0.95) 0.6, 1.0; 11-103 failures / 1.2e6 | Sec. V D | SIM | E18 item 1a |
+| "two to twelve" (X own / X best) | Sec. VI | DERIVED | 6.80/3.29 = 2.1 to 18.65/1.53 = 12.2 (E18 item 1b) |
+Pre-registered verdicts: V1a "partially reduced", V1b "not recovered" at d = 7 (satisfied at d = 5), V2 "flat".
+Erasure efficiency 0.5-1.0 is an assumed range (D012 item 1). PDF now 9 pages.
