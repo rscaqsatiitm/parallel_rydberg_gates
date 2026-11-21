@@ -1,0 +1,12 @@
+narrow T_eff    10000 start (59, 1, 1.5) t 100 us: edge population 4.18e-03 of remaining 0.693
+narrow T_eff    10000 start (60, 0, 0.5) t 0.234 us: edge population 1.28e-05 of remaining 0.999
+narrow T_eff   100000 start (59, 1, 1.5) t 100 us: edge population 4.45e-03 of remaining 0.688
+narrow T_eff   100000 start (60, 0, 0.5) t 0.234 us: edge population 1.41e-05 of remaining 0.999
+narrow T_eff  1000000 start (59, 1, 1.5) t 100 us: edge population 4.98e-03 of remaining 0.694
+narrow T_eff  1000000 start (60, 0, 0.5) t 0.234 us: edge population 1.90e-05 of remaining 0.999
+broad  T_eff    10000 start (59, 1, 1.5) t 100 us: edge population 3.15e-03 of remaining 0.452
+broad  T_eff    10000 start (60, 0, 0.5) t 0.234 us: edge population 1.29e-05 of remaining 0.999
+broad  T_eff   100000 start (59, 1, 1.5) t 100 us: edge population 3.00e-02 of remaining 0.388
+broad  T_eff   100000 start (60, 0, 0.5) t 0.234 us: edge population 1.49e-05 of remaining 0.999
+broad  T_eff  1000000 start (59, 1, 1.5) t 100 us: edge population 4.92e-02 of remaining 0.389
+broad  T_eff  1000000 start (60, 0, 0.5) t 0.234 us: edge population 2.24e-05 of remaining 0.999

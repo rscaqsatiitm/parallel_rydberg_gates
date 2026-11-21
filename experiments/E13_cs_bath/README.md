@@ -28,3 +28,52 @@ Polarisation: factor exactly 1 for linear pi and unpolarised beams from S1/2 (DV
 **Verdict rule.** None (prediction); controls PASS/FAIL.
 
 ## Result
+(appended 2026-11-21; build.py (217 levels, 677 s), run.py -> output.txt, results.json; edge_check.py -> edge_output.txt)
+
+**Controls.** (1) Upward 60S1/2 -> 60P3/2 rate at 300 K vs ARC getTransitionRate: 2.4e-15 relative, PASS; 59P3/2 total
+out-rate vs 1/tau_ARC: 1.000 (by construction of the sink; not an independent test). (2) Conservation 1.6e-15, PASS.
+(3) Inverted degeneracy ratio: 0.75 relative deviation, caught, PASS. The pre-registered check that the sink is not
+driven by the synthetic band was not in the first run; edge_check.py (added after) shows the population on the
+window-edge levels n'' = 45, 46, 74, 75 is <= 5e-3 of the remaining population (narrow band, 100 us) and <= 5e-2 (broad
+band, 1e5-1e6 K, 100 us), and <= 2e-5 after a gate exposure; the unmodelled out-of-window driving therefore affects
+only the "other Rydberg" fraction at broad band and high T_eff, not the resonant quantities.
+
+**(a) Contaminant creation per gate exposure (Omega/2pi = 1 MHz, I_r = 0.234 us), narrow band** (broad in output.txt):
+| T_eff (K) | p_c | linear Gamma I_r | p_c / linear | left in 60S | other Rydberg | Gamma_probe (/us) |
+|---|---|---|---|---|---|---|
+| 300 | 9.24e-4 | 9.26e-4 | 0.998 | 0.998 | 3.9e-4 | 0.011 |
+| 1e3 | 3.08e-3 | 3.09e-3 | 0.997 | 0.995 | 3.9e-4 | 0.020 |
+| 1e4 | 3.02e-2 | 3.09e-2 | 0.978 | 0.968 | 4.7e-4 | 0.139 |
+| 3e4 | 8.69e-2 | 9.26e-2 | 0.939 | 0.911 | 1.1e-3 | 0.40 |
+| 1e5 | 0.252 | 0.309 | 0.818 | 0.740 | 7.0e-3 | 1.33 |
+| 3e5 | 0.525 | 0.926 | 0.567 | 0.431 | 0.043 | 3.96 |
+| 1e6 | 0.664 | 3.09 | 0.215 | 0.147 | 0.188 | 13.2 |
+**What scales linearly:** p_c and every bath-driven rate, in nbar (exactly) and in T_eff (to h nu / 2 k T_eff ~ 2e-3,
+DV3 check). p_c is within 10 % of linear up to T_eff ~ 3e4 K. **What saturates:** p_c, towards ~0.5-0.7 for the narrow
+band (population shared between 60S and the four resonant P levels) and falls again for the broad band (0.27 at 1e6 K)
+because population is driven onward. **Where population spreads:** after one gate exposure, to non-resonant Rydberg
+states only above ~1e5 K (narrow: 0.7 % at 1e5, 19 % at 1e6 K; broad: 7 % at 1e5, 65 % at 1e6 K).
+
+**(b) Contaminant survival (start 59P3/2).** Bath off (300 K): resonant 1/e time tau_res = 150 us; after 100 us,
+51 % resonant, 18 % other Rydberg (room BBR already spreads), 28 % sink. Bath ON, narrow / broad band:
+tau_res = 124 / 85 us (1e3 K), 60 / 13 us (1e4 K), 12 / 1.3 us (1e5 K), 1.3 / 0.14 us (1e6 K). With the bath on, the
+contaminant's harmful lifetime is set by bath-driven transfer to non-resonant states, not by radiative decay; a
+narrow band preserves it ~5-10x longer than a broad one at the same T_eff.
+
+**(c) Polarisation (DV3).** Numerical factors equal the independent checker's analytic values exactly: from
+60S1/2 +1/2, pi and any unpolarised beam (axial or perpendicular) give 1.000 for each final J; sigma+ gives 0 (P1/2)
+and 1.5 (P3/2), sigma- 2 and 0.5, and 1 for the J-summed rate. From 59P3/2 +3/2 -> 60S1/2: pi 0, sigma+ 0, sigma- 3,
+axial beam 1.5, perpendicular beam 0.75; into 58D5/2: 0.8, 2.0, 0.2, 1.1, 0.95 (m = +1/2 values in output.txt); m-averaged
+all 1. **Answer:** a band-limited, single-direction, polarised field is equivalent to a blackbody of the same spectral
+energy density (T_eff from nbar = c^2 I_nu / (8 pi h nu^3)) for the creation rate out of nS1/2 (factor exactly 1 for
+linear or unpolarised light; for circular light only after summing over P1/2 + P3/2), but NOT for the onward rates of
+the P3/2 contaminants, whose correction factors range from 0 to 3 depending on m and polarisation, and NOT for the
+m'-distribution of the contaminants (pi light from +1/2 populates only m' = +1/2). The effect on the harmful fraction is
+small at the one kernel point computed: E_B at R = 10 um, theta = 0, 1 MHz is 0.96-0.99 for m' = -1/2, +1/2, +3/2 and
+0.36 for m' = -3/2; the m'-weighted kernel changes by -2 % (pi), +0.9 % (sigma+) and +1.4 % (sigma-) relative to isotropic.
+**(d) Validity of the coherent kernel (E12) under the bath:** the probe's own bath transfer during 1 us reaches 0.1 at
+T_eff ~ 7e3 K (narrow) and ~ 6e3 K (broad); above that, kernels must be measured with sequences shorter than
+0.1 / Gamma_probe.
+**Expectations.** Linear-to-3e4 K: correct. tau_res falling as 1/T_eff: only asymptotically (150 -> 124 us at 1e3 K,
+because radiative decay and room BBR dominate at low T_eff). Polarisation: correct for S1/2; circular result refined
+(J-summed equality) by the independent check.
