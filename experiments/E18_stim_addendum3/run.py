@@ -38,7 +38,7 @@ if __name__ == "__main__":
     for d in (9, 11):
         std(f"B_corr_d{d}", d, 1e-3, "corr", 40_000_000, min_fail_idx=1, use_cm=False)
         std(f"B_indep_d{d}", d, 1e-3, "indep", 120_000_000)
-        std(f"B_base_d{d}", d, 1e-3, "base", 100_000_000)
+        std(f"B_base_d{d}", d, 1e-3, "base", 100_000_000 if d == 9 else 30_000_000)
     # item 4 (pitch 10.0 x 12.0)
     for d in (3, 5, 7):
         std(f"C_corr_d{d}", d, 1e-3, "corr", 10_000_000, min_fail_idx=1, pitch=(10.0, 12.0))
