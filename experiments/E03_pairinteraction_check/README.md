@@ -28,3 +28,7 @@ pairinteraction/database-sqdt was refused by the session's permission system). T
 Unblock: provide the Rb tables in /root/.cache/pairinteraction/database/tables, or GitHub access to
 that repository, then run `python pi_reference.py` here and compare under the rule above.
 Substitute independent route: E03b (Coulomb-approximation radial integrals without ARC).
+
+**Re-attempt (2026-11-21, Addendum 3 item 5): still BLOCKED.** `pairinteraction database download Rb` fails with
+"Failed obtaining the rate limit: status code 401. The download of database tables is disabled."; the GitHub API
+returns 403 for the data repository's releases. No route-2 numbers exist; E03b remains the independent route.
