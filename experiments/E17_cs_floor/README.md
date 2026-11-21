@@ -25,3 +25,29 @@ per atom at 1e4 K and a = 10-12 um of order 1e-3-1e-2, shots ~1e4-1e5.
 **Verdict rule.** None (prediction).
 
 ## Result
+(appended 2026-11-21; run.py -> output.txt, results.json. Implementation change before the reported run, not a design
+change: the first run was killed at the 30-min limit; propagation was switched from per-step expm to one
+eigendecomposition per piecewise-constant Hamiltonian (mathematically identical). A display bug (shot counts at 300 K,
+where eps - eps(300 K) = 0 by definition) was fixed; 300 K has no shot entry.)
+
+**Kernel E_same(R) (60S probe, 2pi pulse, theta = 90 deg, m'-averaged over 59P and 60P):** saturates at 0.75 at short range
+(the contaminant blocks the probe's return in three quarters of the creation times); falls to 0.5 at R ~ 20 um
+(0.5 MHz), 16 um (1 MHz), 13 um (2 MHz), 10 um (5 MHz); 0.02-0.09 at 30 um for 0.5-1 MHz. The expectation
+(0.3-0.5 x the blockade kernel) was wrong: E_same is comparable to the pi-pulse kernel at short range.
+**V1 (vdW crosstalk, |C6| / a^6 <= 0.1 Omega/2pi) excludes a <= 10 um at 0.5-1 MHz, a <= 8 um at 2 MHz, a <= 6 um at 5 MHz.**
+**Floor per atom (3 atoms on a line), 300 K, valid spacings:** Omega/2pi = 1 MHz: 1.8e-3 (12 um), 1.4e-3 (15), 5.7e-4 (20),
+1.7e-4 (25), 6.1e-5 (30); 5 MHz: 3.7e-4 (8 um), 2.4e-4 (10), 1.1e-4 (12), 3.5e-5 (15), 6.5e-6 (20).
+**Under the synthetic bath (narrow band), with shots for a 10 % measurement of eps - eps(300 K) at C = 0.90
+(independent-probe bound; x3 for fully correlated):**
+| T_eff | Omega/2pi | a = 12 um | a = 15 um | a = 20 um | validity |
+|---|---|---|---|---|---|
+| 1e3 K | 1 MHz | 6.0e-3 [4e5] | 4.8e-3 [7e5] | 1.9e-3 [4e6] | V1-V3 ok |
+| 3e3 K | 1 MHz | 1.8e-2 [3e4] | 1.4e-2 [5e4] | 5.6e-3 [3e5] | ok |
+| 3e3 K | 2 MHz | 7.2e-3 [2e5] (10 um: 8.9e-3 [1e5]) | 3.7e-3 [7e5] | 8.4e-4 [1e7] | ok |
+| 1e4 K | 2 MHz | 2.4e-2 [2e4] (10 um: 2.9e-2 [1e4]) | 1.2e-2 [6e4] | 2.8e-3 [1e6] | ok |
+| 1e4 K | 5 MHz | 3.8e-3 [6e5] (8 um: 1.2e-2 [6e4]) | 1.2e-3 [6e6] | 2.1e-4 [2e8] | ok |
+| 1e4 K | 1 MHz | 5.8e-2 [3e3] | 4.6e-2 [5e3] | 1.8e-2 [3e4] | V2, V3 violated |
+Full grid (a = 3-30 um, Omega/2pi = 0.5-5 MHz, T_eff = 300 K-1e4 K) in output.txt. **Best valid operating points:**
+T_eff ~ 3e3 K at 1 MHz and a = 12-15 um, or T_eff ~ 1e4 K at 2 MHz and a = 10-12 um: floor 1-3e-2 per atom, 1-5e4 shots.
+The floor falls with Omega at fixed a (e.g. 1e4 K, a = 12 um: 5.8e-2, 2.4e-2, 3.8e-3 at 1, 2, 5 MHz) and with a as the kernel
+tail; at 5 MHz and a >= 15 um it is below 1e-3 even at 1e4 K.
