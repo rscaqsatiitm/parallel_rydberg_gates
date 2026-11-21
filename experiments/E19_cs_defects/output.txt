@@ -1,0 +1,103 @@
+K = 9.7500856e-04 MHz um^3
+n | nu(n-1 P1/2) nu(n-1 P3/2) nu(n P1/2) nu(n P3/2) [GHz] | sigma_cov [MHz] | R(n-1P3/2) R(nP3/2) R(n-1P1/2) R(nP1/2) [a0] | C3(n-1P3/2) C3(nP3/2) [MHz um^3]
+50 -37.438082 -35.155835 30.582133 32.720063 | 0.080 0.070 0.077 0.068 | 2257.12 2412.18 2155.72 2504.91 | 1655.8 1891.1
+52 -32.921175 -30.915647 26.929641 28.813479 | 0.073 0.064 0.070 0.062 | 2460.14 2624.58 2349.77 2725.63 | 1967.0 2238.8
+55 -27.413484 -25.745017 22.466318 24.039336 | 0.063 0.055 0.060 0.053 | 2781.04 2959.97 2656.50 3074.19 | 2513.6 2847.5
+60 -20.671079 -19.414633 16.985954 18.176777 | 0.050 0.044 0.048 0.042 | 3359.58 3563.75 3209.51 3701.69 | 3668.2 4127.6
+65 -15.970335 -15.000684 13.152507 14.075569 | 0.040 0.035 0.039 0.034 | 3992.72 4223.53 3814.76 4387.43 | 5181.1 5797.5
+70 -12.593413 -11.829510 10.391018 11.120938 | 0.033 0.029 0.032 0.028 | 4680.48 4939.31 4472.25 5131.39 | 7119.8 7929.0
+80 -8.231673 -7.733101 6.812672 7.291929 | 0.022 0.019 0.021 0.019 | 6219.84 6538.83 5943.93 6794.01 | 12573.2 13895.9
+50 sigma_diag [MHz] 0.300 0.299 0.290 0.290
+52 sigma_diag [MHz] 0.263 0.262 0.254 0.254
+55 sigma_diag [MHz] 0.218 0.218 0.211 0.211
+60 sigma_diag [MHz] 0.163 0.163 0.159 0.159
+65 sigma_diag [MHz] 0.126 0.126 0.123 0.123
+70 sigma_diag [MHz] 0.099 0.099 0.097 0.097
+80 sigma_diag [MHz] 0.065 0.065 0.063 0.063
+[
+{
+"pair": "10,0 -> 9,1",
+"exact_a0": 25.150758079320006,
+"numerov_a0_rin3": 25.18334404623441,
+"rel_err_rin3": 0.0012956256352845141,
+"numerov_a0_rin0": 25.150758074979336,
+"rel_err_rin0": -1.7258605655712245e-10
+},
+{
+"pair": "10,0 -> 10,1",
+"exact_a0": 149.248115565993,
+"numerov_a0_rin3": 149.39592656260942,
+"rel_err_rin3": 0.0009903709407377281,
+"numerov_a0_rin0": 149.24811556223437,
+"rel_err_rin0": -2.518374397908474e-11,
+"bethe_salpeter_a0": 149.248115565993
+},
+{
+"pair": "50,0 -> 49,1",
+"exact_a0": 774.8880197802547,
+"numerov_a0_rin3": 774.8944377394447,
+"rel_err_rin3": 8.282434398543259e-06,
+"numerov_a0_rin0": 774.8880092384561,
+"rel_err_rin0": -1.3604286475121796e-08
+},
+{
+"pair": "50,0 -> 50,1",
+"exact_a0": 3749.249924984996,
+"numerov_a0_rin3": 3749.279713180333,
+"rel_err_rin3": 7.945107937112894e-06,
+"numerov_a0_rin0": 3749.2499227835315,
+"rel_err_rin0": -5.871746422414503e-10,
+"bethe_salpeter_a0": 3749.249924984996
+},
+{
+"pair": "80,0 -> 79,1",
+"exact_a0": 2020.0050454850677,
+"numerov_a0_rin3": 2020.0083691035904,
+"rel_err_rin3": 1.6453515945258346e-06,
+"numerov_a0_rin0": 2020.004341867223,
+"rel_err_rin0": -3.4832479567370456e-07
+},
+{
+"pair": "80,0 -> 80,1",
+"exact_a0": 9599.249970700836,
+"numerov_a0_rin3": 9599.268432266514,
+"rel_err_rin3": 1.9232300163540827e-06,
+"numerov_a0_rin0": 9599.249808501876,
+"rel_err_rin0": -1.6897045096442298e-08,
+"bethe_salpeter_a0": 9599.249970700836
+}
+]
+50S1/2-49P3/2 {0.5: np.float64(2257.1089), 1.0: np.float64(2257.1158), 2.0: np.float64(2257.1199), 3.0: np.float64(2257.1248), 4.0: np.float64(2257.1406), 6.0: np.float64(2257.172), 10.0: np.float64(2257.2282)} spread 2.49e-05 h/2 -8.69e-11
+50S1/2-50P3/2 {0.5: np.float64(2412.1639), 1.0: np.float64(2412.1709), 2.0: np.float64(2412.1751), 3.0: np.float64(2412.1803), 4.0: np.float64(2412.1967), 6.0: np.float64(2412.2285), 10.0: np.float64(2412.2873)} spread 2.39e-05 h/2 -8.06e-11
+50S1/2-49P1/2 {0.5: np.float64(2155.7089), 1.0: np.float64(2155.7151), 2.0: np.float64(2155.7182), 3.0: np.float64(2155.7233), 4.0: np.float64(2155.7395), 6.0: np.float64(2155.7687), 10.0: np.float64(2155.8236)} spread 2.49e-05 h/2 -9.00e-11
+80S1/2-79P3/2 {0.5: np.float64(6219.8269), 1.0: np.float64(6219.8311), 2.0: np.float64(6219.8336), 3.0: np.float64(6219.8366), 4.0: np.float64(6219.8462), 6.0: np.float64(6219.8651), 10.0: np.float64(6219.8992)} spread 5.46e-06 h/2 1.15e-10
+80S1/2-80P3/2 {0.5: np.float64(6538.822), 1.0: np.float64(6538.8262), 2.0: np.float64(6538.8288), 3.0: np.float64(6538.8319), 4.0: np.float64(6538.8418), 6.0: np.float64(6538.8611), 10.0: np.float64(6538.8965)} spread 5.33e-06 h/2 -2.73e-10
+80S1/2-79P1/2 {0.5: np.float64(5943.9224), 1.0: np.float64(5943.9261), 2.0: np.float64(5943.928), 3.0: np.float64(5943.9311), 4.0: np.float64(5943.9409), 6.0: np.float64(5943.9585), 10.0: np.float64(5943.9919)} spread 5.45e-06 h/2 -2.02e-10
+Allinson s-p intervals: n 30 mean 0.12200194904039563 rms 0.9269002947585837 max 2.4176330582577066
+{'transition': '20P1/2->20S1/2', 'meas_GHz': -710.9264, 'calc_GHz': -710.926513929902, 'resid_MHz': 0.11392990199965425}
+{'transition': '21P3/2->22S1/2', 'meas_GHz': 606.1677, 'calc_GHz': 606.1675749750008, 'resid_MHz': 0.12502499919264665}
+{'transition': '30P3/2->30S1/2', 'meas_GHz': -516.1775, 'calc_GHz': -179.42869622224092, 'resid_MHz': -336748.80377775914}
+{'transition': '30P3/2->32S1/2', 'meas_GHz': 494.7101, 'calc_GHz': 494.71003209059035, 'resid_MHz': 0.06790940966538983}
+{'transition': '36P3/2->34S1/2', 'meas_GHz': -541.433, 'calc_GHz': -541.4346007212972, 'resid_MHz': 1.6007212972226625}
+{'transition': '35P1/2->33S1/2', 'meas_GHz': -590.2641, 'calc_GHz': -590.2647348484992, 'resid_MHz': 0.6348484992031445}
+calc 31P3/2->30S1/2 -516.1779683394238
+{'state': '27P1/2', 'meas_cm': 31206.1897698, 'resid_MHz_AllinsonQD_ShenIE': 5.049100968984579, 'resid_MHz_AllinsonQD_DeiglmayrIE': 5.618106980781663, 'resid_MHz_DeiglmayrQD_DeiglmayrIE': -0.004054230900231778}
+{'state': '27P3/2', 'meas_cm': 31206.7447505, 'resid_MHz_AllinsonQD_ShenIE': 5.024062742188522, 'resid_MHz_AllinsonQD_DeiglmayrIE': 5.593068753985606, 'resid_MHz_DeiglmayrQD_DeiglmayrIE': 0.016599628688730446}
+{'state': '50P3/2', 'meas_cm': 31355.5869323, 'resid_MHz_AllinsonQD_ShenIE': 0.6945440779188043, 'resid_MHz_AllinsonQD_DeiglmayrIE': 1.263550089715889, 'resid_MHz_DeiglmayrQD_DeiglmayrIE': -0.016333621932061216}
+{'state': '56P1/2', 'meas_cm': 31366.5144268, 'resid_MHz_AllinsonQD_ShenIE': 0.18735818906105414, 'resid_MHz_AllinsonQD_DeiglmayrIE': 0.7563642008581387, 'resid_MHz_DeiglmayrQD_DeiglmayrIE': -0.015429918780867592}
+{'state': '56P3/2', 'meas_cm': 31366.5639566, 'resid_MHz_AllinsonQD_ShenIE': 0.3405441620417994, 'resid_MHz_AllinsonQD_DeiglmayrIE': 0.9095501738388841, 'resid_MHz_DeiglmayrQD_DeiglmayrIE': -0.01597382025504121}
+{'state': '62P1/2', 'meas_cm': 31374.3012688, 'resid_MHz_AllinsonQD_ShenIE': -0.017395467681520678, 'resid_MHz_AllinsonQD_DeiglmayrIE': 0.551610544115564, 'resid_MHz_DeiglmayrQD_DeiglmayrIE': -0.018343014504785243}
+{'state': '62P3/2', 'meas_cm': 31374.3370559, 'resid_MHz_AllinsonQD_ShenIE': 0.17885055352979543, 'resid_MHz_AllinsonQD_DeiglmayrIE': 0.74785656532688, 'resid_MHz_DeiglmayrQD_DeiglmayrIE': 0.05993571755117082}
+{'state': '70P1/2', 'meas_cm': 31381.584461, 'resid_MHz_AllinsonQD_ShenIE': -0.2841509477556443, 'resid_MHz_AllinsonQD_DeiglmayrIE': 0.2848550640414404, 'resid_MHz_DeiglmayrQD_DeiglmayrIE': -0.11099865376488015}
+{'state': '70P3/2', 'meas_cm': 31381.6088174, 'resid_MHz_AllinsonQD_ShenIE': -0.01718421098300969, 'resid_MHz_AllinsonQD_DeiglmayrIE': 0.551821800814075, 'resid_MHz_DeiglmayrQD_DeiglmayrIE': 0.07121488391493404}
+{'state': '74P1/2', 'meas_cm': 31384.3314669, 'resid_MHz_AllinsonQD_ShenIE': -0.2710402719762409, 'resid_MHz_AllinsonQD_DeiglmayrIE': 0.29796573982084373, 'resid_MHz_DeiglmayrQD_DeiglmayrIE': -0.036768263160668724}
+{'state': '74P3/2', 'meas_cm': 31384.3519001, 'resid_MHz_AllinsonQD_ShenIE': -0.1782187465837582, 'resid_MHz_AllinsonQD_DeiglmayrIE': 0.3907872652133264, 'resid_MHz_DeiglmayrQD_DeiglmayrIE': -0.01650103495850126}
+{'R_inf_cm-1': 109737.31568157, 'R_Cs_cm-1_Shen': 109736.8627304, 'implied_m_core_u': 132.90491815060565, 'implied_m_atom_u': 132.9054667305147}
+{'n': 50, 'dnu_MHz_Deiglmayr_minus_Allinson_49P1/2': 0.314, 'dnu_MHz_ShenS_minus_Allinson_49P1/2': -0.405, 'R_a0_Deiglmayr_defects_49P1/2': np.float64(2155.737), 'dnu_MHz_Deiglmayr_minus_Allinson_49P3/2': 0.526, 'dnu_MHz_ShenS_minus_Allinson_49P3/2': -0.405, 'R_a0_Deiglmayr_defects_49P3/2': np.float64(2257.148), 'dnu_MHz_Deiglmayr_minus_Allinson_50P1/2': 0.249, 'dnu_MHz_ShenS_minus_Allinson_50P1/2': -0.405, 'R_a0_Deiglmayr_defects_50P1/2': np.float64(2504.9), 'dnu_MHz_Deiglmayr_minus_Allinson_50P3/2': 0.451, 'dnu_MHz_ShenS_minus_Allinson_50P3/2': -0.405, 'R_a0_Deiglmayr_defects_50P3/2': np.float64(2412.16)}
+{'n': 52, 'dnu_MHz_Deiglmayr_minus_Allinson_51P1/2': 0.276, 'dnu_MHz_ShenS_minus_Allinson_51P1/2': -0.366, 'R_a0_Deiglmayr_defects_51P1/2': np.float64(2349.78), 'dnu_MHz_Deiglmayr_minus_Allinson_51P3/2': 0.469, 'dnu_MHz_ShenS_minus_Allinson_51P3/2': -0.366, 'R_a0_Deiglmayr_defects_51P3/2': np.float64(2460.165), 'dnu_MHz_Deiglmayr_minus_Allinson_52P1/2': 0.219, 'dnu_MHz_ShenS_minus_Allinson_52P1/2': -0.366, 'R_a0_Deiglmayr_defects_52P1/2': np.float64(2725.622), 'dnu_MHz_Deiglmayr_minus_Allinson_52P3/2': 0.404, 'dnu_MHz_ShenS_minus_Allinson_52P3/2': -0.366, 'R_a0_Deiglmayr_defects_52P3/2': np.float64(2624.555)}
+{'n': 55, 'dnu_MHz_Deiglmayr_minus_Allinson_54P1/2': 0.229, 'dnu_MHz_ShenS_minus_Allinson_54P1/2': -0.315, 'R_a0_Deiglmayr_defects_54P1/2': np.float64(2656.516), 'dnu_MHz_Deiglmayr_minus_Allinson_54P3/2': 0.397, 'dnu_MHz_ShenS_minus_Allinson_54P3/2': -0.315, 'R_a0_Deiglmayr_defects_54P3/2': np.float64(2781.074), 'dnu_MHz_Deiglmayr_minus_Allinson_55P1/2': 0.184, 'dnu_MHz_ShenS_minus_Allinson_55P1/2': -0.315, 'R_a0_Deiglmayr_defects_55P1/2': np.float64(3074.173), 'dnu_MHz_Deiglmayr_minus_Allinson_55P3/2': 0.344, 'dnu_MHz_ShenS_minus_Allinson_55P3/2': -0.315, 'R_a0_Deiglmayr_defects_55P3/2': np.float64(2959.945)}
+{'n': 60, 'dnu_MHz_Deiglmayr_minus_Allinson_59P1/2': 0.172, 'dnu_MHz_ShenS_minus_Allinson_59P1/2': -0.249, 'R_a0_Deiglmayr_defects_59P1/2': np.float64(3209.532), 'dnu_MHz_Deiglmayr_minus_Allinson_59P3/2': 0.306, 'dnu_MHz_ShenS_minus_Allinson_59P3/2': -0.249, 'R_a0_Deiglmayr_defects_59P3/2': np.float64(3359.613), 'dnu_MHz_Deiglmayr_minus_Allinson_60P1/2': 0.139, 'dnu_MHz_ShenS_minus_Allinson_60P1/2': -0.249, 'R_a0_Deiglmayr_defects_60P1/2': np.float64(3701.676), 'dnu_MHz_Deiglmayr_minus_Allinson_60P3/2': 0.268, 'dnu_MHz_ShenS_minus_Allinson_60P3/2': -0.249, 'R_a0_Deiglmayr_defects_60P3/2': np.float64(3563.723)}
+{'n': 65, 'dnu_MHz_Deiglmayr_minus_Allinson_64P1/2': 0.132, 'dnu_MHz_ShenS_minus_Allinson_64P1/2': -0.199, 'R_a0_Deiglmayr_defects_64P1/2': np.float64(3814.785), 'dnu_MHz_Deiglmayr_minus_Allinson_64P3/2': 0.24, 'dnu_MHz_ShenS_minus_Allinson_64P3/2': -0.199, 'R_a0_Deiglmayr_defects_64P3/2': np.float64(3992.766), 'dnu_MHz_Deiglmayr_minus_Allinson_65P1/2': 0.108, 'dnu_MHz_ShenS_minus_Allinson_65P1/2': -0.199, 'R_a0_Deiglmayr_defects_65P1/2': np.float64(4387.407), 'dnu_MHz_Deiglmayr_minus_Allinson_65P3/2': 0.212, 'dnu_MHz_ShenS_minus_Allinson_65P3/2': -0.199, 'R_a0_Deiglmayr_defects_65P3/2': np.float64(4223.494)}
+{'n': 70, 'dnu_MHz_Deiglmayr_minus_Allinson_69P1/2': 0.104, 'dnu_MHz_ShenS_minus_Allinson_69P1/2': -0.161, 'R_a0_Deiglmayr_defects_69P1/2': np.float64(4472.275), 'dnu_MHz_Deiglmayr_minus_Allinson_69P3/2': 0.192, 'dnu_MHz_ShenS_minus_Allinson_69P3/2': -0.161, 'R_a0_Deiglmayr_defects_69P3/2': np.float64(4680.533), 'dnu_MHz_Deiglmayr_minus_Allinson_70P1/2': 0.086, 'dnu_MHz_ShenS_minus_Allinson_70P1/2': -0.161, 'R_a0_Deiglmayr_defects_70P1/2': np.float64(5131.368), 'dnu_MHz_Deiglmayr_minus_Allinson_70P3/2': 0.171, 'dnu_MHz_ShenS_minus_Allinson_70P3/2': -0.161, 'R_a0_Deiglmayr_defects_70P3/2': np.float64(4939.259)}
+{'n': 80, 'dnu_MHz_Deiglmayr_minus_Allinson_79P1/2': 0.067, 'dnu_MHz_ShenS_minus_Allinson_79P1/2': -0.109, 'R_a0_Deiglmayr_defects_79P1/2': np.float64(5943.968), 'dnu_MHz_Deiglmayr_minus_Allinson_79P3/2': 0.127, 'dnu_MHz_ShenS_minus_Allinson_79P3/2': -0.109, 'R_a0_Deiglmayr_defects_79P3/2': np.float64(6219.906), 'dnu_MHz_Deiglmayr_minus_Allinson_80P1/2': 0.057, 'dnu_MHz_ShenS_minus_Allinson_80P1/2': -0.109, 'R_a0_Deiglmayr_defects_80P1/2': np.float64(6793.977), 'dnu_MHz_Deiglmayr_minus_Allinson_80P3/2': 0.115, 'dnu_MHz_ShenS_minus_Allinson_80P3/2': -0.109, 'R_a0_Deiglmayr_defects_80P3/2': np.float64(6538.769)}
+wall 4.105819225311279
