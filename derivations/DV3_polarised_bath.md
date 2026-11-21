@@ -44,3 +44,16 @@ J_i >= 1. Hence:
 what conditions does the total rate summed over m' equal the rate for isotropic unpolarised radiation of the same
 spectral energy density? 2. Same question for J = 3/2 initial states. 3. How is the effective temperature of a
 directed, unpolarised beam of spectral intensity I_nu defined so that rates match a blackbody?
+
+## Independent check (2026-11-21; fresh agent given only the assumptions and the three neutral questions above,
+no repository access; Wigner 3j by sympy)
+Agrees with R1-R6, with two refinements adopted here:
+(a) For S1/2 m = +1/2 the circular factors differ from 1 for each final J separately (sigma+: P1/2 0, P3/2 3/2;
+sigma-: P1/2 2, P3/2 1/2) but are exactly 1 for the line-strength-weighted sum over J' = 1/2, 3/2 (l -> l' summed over
+J' acts on orbital and spin together). Linear pi and any unpolarised beam: exactly 1 for each J'.
+(b) Rates are linear in nbar, hence in I_nu, exactly; in T_eff only to leading order:
+nbar = k T_eff / (h nu) - 1/2 + h nu / (12 k T_eff) + ... (relative correction ~ h nu / (2 k T_eff), 2e-3 at 20 GHz and 300 K).
+For P3/2 initial states the checker's ratio tables (pi, sigma+-, axial and perpendicular unpolarised beams) equal
+1 only after averaging over m; e.g. P3/2 m = +3/2 -> S1/2: pi 0, sigma- 3, axial beam 3/2, perpendicular beam 3/4.
+T_eff of a directed beam: nbar = c^2 I_nu / (8 pi h nu^3) (energy-density matching, u = I_nu / c), not radiance matching.
+These are compared with the E13 numerical factors in the E13 result.
