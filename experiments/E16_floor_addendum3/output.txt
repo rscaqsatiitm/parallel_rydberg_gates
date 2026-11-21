@@ -1,3 +1,11 @@
 p_c resonant 2.5333e-04; extra-channel rate 2156/s of total 7342/s (resonant 4983); top extra: 51P 433/s C3 ratio 0.017, 54P 331/s C3 ratio 0.017, 50P 206/s C3 ratio 0.003, 55P 141/s C3 ratio 0.003, 49P 129/s C3 ratio 0.001, 48P 92/s C3 ratio 0.000
 control n'=51 R=8.571: direct 2.976e-04 rescaled 3.195e-04 ratio 1.07
 control n'=51 R=12.0: direct 3.474e-05 rescaled 3.195e-05 ratio 0.92
+control n'=51 R=17.0: direct 4.007e-06 rescaled 3.952e-06 ratio 0.99
+control n'=54 R=8.571: direct 2.910e-04 rescaled 3.181e-04 ratio 1.09
+control n'=54 R=12.0: direct 3.396e-05 rescaled 3.175e-05 ratio 0.93
+control n'=54 R=17.0: direct 3.917e-06 rescaled 3.927e-06 ratio 1.00
+pitch 8.571: resonant 6.92e-04-1.08e-03 | extra 5.77e-08-2.42e-07 | earlier@400us 2.03e-05-3.15e-05 | total 7.18e-04-1.11e-03 | same-layer factor 1.000-1.000 | total/resonant 1.025-1.038
+pitch 10.0: resonant 4.57e-04-8.50e-04 | extra 2.56e-08-1.09e-07 | earlier@400us 1.57e-05-2.49e-05 | total 4.77e-04-8.74e-04 | same-layer factor 1.000-1.000 | total/resonant 1.028-1.044
+
+[exited with code 0]
