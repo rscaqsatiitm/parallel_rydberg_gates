@@ -1,0 +1,3 @@
+p_c resonant 2.5333e-04; extra-channel rate 2156/s of total 7342/s (resonant 4983); top extra: 51P 433/s C3 ratio 0.017, 54P 331/s C3 ratio 0.017, 50P 206/s C3 ratio 0.003, 55P 141/s C3 ratio 0.003, 49P 129/s C3 ratio 0.001, 48P 92/s C3 ratio 0.000
+control n'=51 R=8.571: direct 2.976e-04 rescaled 3.195e-04 ratio 1.07
+control n'=51 R=12.0: direct 3.474e-05 rescaled 3.195e-05 ratio 0.92

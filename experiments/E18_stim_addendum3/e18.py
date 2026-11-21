@@ -140,7 +140,7 @@ def _work_erasure(args):
     rng = np.random.default_rng(seed + 7)
     mats = {}
     for eta in etas:
-        cd, _ = m10.build(d, p, mult * (1 - eta), mode, pitch=pitch) if eta < 1 else m10.build(d, p, 0, "base")
+        cd, _ = m10.build(d, p, mult * (1 - eta), "indep", pitch=pitch) if eta < 1 else m10.build(d, p, 0, "base")
         mats[eta] = pymatching.Matching.from_detector_error_model(dem_of(cd))
     fails = {eta: 0 for eta in etas}; done = 0
     while done < shots:
@@ -161,15 +161,21 @@ def run_erasure(d, p, mult, mode, shots, etas, pitch=m10.PITCH, nproc=3, seed0=1
     return {eta: sum(r[eta] for r in rs) for eta in etas}
 
 def _work_std(args):
+    """Returns failures for decoders [own, marg, cm] (corr) or [own] (base, indep)."""
     d, p, mult, mode, shots, seed, kw = args
-    corrdec = kw.pop("corrdec", False)
+    use_cm = kw.pop("use_cm", True)
     if mode == "base": c, _ = m10.build(d, p, 0, "base")
     else: c, _ = build_flagged(d, p, mult, mode, flags=False, **kw)
-    m = pymatching.Matching.from_detector_error_model(dem_of(c), enable_correlations=corrdec)
-    s = c.compile_detector_sampler(seed=seed); k = 0
+    decs = [(pymatching.Matching.from_detector_error_model(dem_of(c)), False)]
+    if mode == "corr":
+        ci, _ = build_flagged(d, p, mult, "indep", flags=False, **kw)
+        decs.append((pymatching.Matching.from_detector_error_model(dem_of(ci)), False))
+        if use_cm: decs.append((pymatching.Matching.from_detector_error_model(clean_for_correlations(dem_of(c)), enable_correlations=True), True))
+    s = c.compile_detector_sampler(seed=seed); k = np.zeros(len(decs), int)
     for b in range(0, shots, 100_000):
         det, obs = s.sample(min(100_000, shots - b), separate_observables=True)
-        k += int(np.any(m.decode_batch(det, enable_correlations=corrdec) != obs, axis=1).sum())
+        for i, (m, cm) in enumerate(decs):
+            k[i] += int(np.any(m.decode_batch(det, enable_correlations=cm) != obs, axis=1).sum())
     return k
 
 def run_std(d, p, mult, mode, shots, nproc=3, seed0=1, **kw):

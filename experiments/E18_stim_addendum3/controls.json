@@ -1,0 +1,28 @@
+{
+ "C1_corr": {
+  "E10": 1121,
+  "flagged": 1087,
+  "PASS": true
+ },
+ "C1_indep": {
+  "E10": 720,
+  "flagged": 725,
+  "PASS": true
+ },
+ "C2": {
+  "max_abs_z": 2.3824033963573656,
+  "mean_f": 0.038882434592778015,
+  "PASS": true
+ },
+ "C3": {
+  "no_herald": 2030,
+  "herald": 516,
+  "herald_shifted": 10658,
+  "PASS": true
+ },
+ "C4": {
+  "standard": 140,
+  "corrmatch": 128,
+  "note": "agree within intervals, or small gain from Y-error correlations"
+ }
+}
